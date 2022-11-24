@@ -1,0 +1,1 @@
+{"mappings":"AAGA,SAAS,OAAM;IACX,MAAM,oBAAoB,SAAS,aAAa,CAAC;IACjD,iBAAiB;AACrB;AAEA","sources":["src/index.ts"],"sourcesContent":["\n\n\nfunction main(){\n    const headerContainerEl = document.querySelector(\".header\")\n    renderizarHeader(headerContainerEl)\n}\n\nmain()"],"names":[],"version":3,"file":"index.377278e2.js.map","sourceRoot":"/__parcel_source_root/"}

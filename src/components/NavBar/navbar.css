@@ -1,0 +1,36 @@
+.navBar-container{
+    
+    width: fit-content;
+    
+    display: flex;
+    flex-shrink: 1;
+}
+
+.icono{
+    margin-right: 15px;
+    font-size: 24px;
+}
+
+.navBar-input{
+    margin-right: 15px;
+    border-radius: 5px;
+    border-style: none;
+}
+
+.boton{
+   border: none;
+   min-width: 5vw;
+   padding: 0 5px;
+   background-color: black; 
+   color: white;
+   border-radius: 5px;
+}
+
+@media (min-width:768px){
+    .icono{
+        margin-right: 25px;
+    }
+    .navBar-input{
+        border: solid 1px;
+    }
+}
