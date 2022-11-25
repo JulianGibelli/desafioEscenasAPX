@@ -641,6 +641,11 @@ function renderizarSentComponent(dondeRenderizo) {
         const nuevoContainerSent = document.createElement("div");
         nuevoContainerSent.innerHTML = `
             <h1 class="prueba">HOLA soy sent</h1>
+            <ul>
+              <li><a href="/inbox/prueba4">prueba 4</a></li>
+              <li><a href="/inbox/prueba5">prueba 5</a></li>
+              <li><a href="/inbox/prueba6">prueba 6</a></li>
+            </ul>
         `;
         dondeRenderizo.appendChild(nuevoContainerSent);
     }
@@ -661,6 +666,11 @@ function renderizarInboxComponent(dondeRenderizo) {
         const nuevoContainerInbox = document.createElement("div");
         nuevoContainerInbox.innerHTML = `
             <h1 class="prueba2">HOLA soy inbox</h1>
+            <ul>
+              <li><a href="/inbox/prueba1">prueba 1</a></li>
+              <li><a href="/inbox/prueba2">prueba 2</a></li>
+              <li><a href="/inbox/prueba3">prueba 3</a></li>
+            </ul>
         `;
         dondeRenderizo.appendChild(nuevoContainerInbox);
     }

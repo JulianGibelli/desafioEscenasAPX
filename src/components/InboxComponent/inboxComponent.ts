@@ -14,6 +14,11 @@ export function renderizarInboxComponent(dondeRenderizo) {
     const nuevoContainerInbox = document.createElement("div");
     nuevoContainerInbox.innerHTML = `
             <h1 class="prueba2">HOLA soy inbox</h1>
+            <ul>
+              <li><a href="/inbox/prueba1">prueba 1</a></li>
+              <li><a href="/inbox/prueba2">prueba 2</a></li>
+              <li><a href="/inbox/prueba3">prueba 3</a></li>
+            </ul>
         `;
 
     dondeRenderizo.appendChild(nuevoContainerInbox);
