@@ -1,5 +1,6 @@
 import {renderizarHeader} from "./components/NavBar/navbar"
 import {renderizarSentComponent} from "./components/SentComponent/sentComponent"
+import {renderizarInboxComponent} from "./components/InboxComponent/inboxComponent"
 
 
 function handleRoute(path){
@@ -10,13 +11,12 @@ function handleRoute(path){
         path: /\/inbox/,
         handler:()=> {
             //si descomento esta llamada se rompe todo
-            
-            //renderizarSentComponent(mainSectionContainer)
+            renderizarInboxComponent(mainSectionContainer)
         }
     },
     {
         path: /\/sent/,
-        handler: ()=> console.log("soy /sent del handler")
+        handler: ()=> renderizarSentComponent(mainSectionContainer)
     }]
 
     for (const rutaP of rutasPosibles) {

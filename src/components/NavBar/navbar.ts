@@ -1,4 +1,4 @@
-import "./navbar.css"
+import "./navbar.css" 
 
 export function renderizarHeader(dondeRenderizo){
     const nuevoContainer = document.createElement("div")

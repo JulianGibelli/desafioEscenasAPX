@@ -50,7 +50,7 @@
   .buttons-container {
     width: 25vw;
     height: 90vh;
-    background-color: #0ff;
+    background-color: #c4c4c4;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;

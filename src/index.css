@@ -49,7 +49,7 @@
     .buttons-container{
         width: 25vw;
         padding: 10px;
-        background-color: aqua;
+        background-color:  #C4C4C4;        
         height: calc(100vh - 10vh);
         display: flex;
         flex-direction: column;

@@ -533,6 +533,8 @@ function hmrAcceptRun(bundle, id) {
 
 },{}],"h7u1C":[function(require,module,exports) {
 var _navbar = require("./components/NavBar/navbar");
+var _sentComponent = require("./components/SentComponent/sentComponent");
+var _inboxComponent = require("./components/InboxComponent/inboxComponent");
 function handleRoute(path) {
     //aca me va a llegar /inbox /sent / etc
     const mainSectionContainer = document.querySelector(".section-mainContent");
@@ -540,13 +542,13 @@ function handleRoute(path) {
         {
             path: /\/inbox/,
             handler: ()=>{
-            //si descomento esta llamada se rompe todo
-            //renderizarSentComponent(mainSectionContainer)
+                //si descomento esta llamada se rompe todo
+                (0, _inboxComponent.renderizarInboxComponent)(mainSectionContainer);
             }
         },
         {
             path: /\/sent/,
-            handler: ()=>console.log("soy /sent del handler")
+            handler: ()=>(0, _sentComponent.renderizarSentComponent)(mainSectionContainer)
         }
     ];
     for (const rutaP of rutasPosibles)if (rutaP.path.test(path)) rutaP.handler();
@@ -579,7 +581,7 @@ function goTo(ruta) {
 }
 main();
 
-},{"./components/NavBar/navbar":"04gNi"}],"04gNi":[function(require,module,exports) {
+},{"./components/NavBar/navbar":"04gNi","./components/SentComponent/sentComponent":"9kmaD","./components/InboxComponent/inboxComponent":"4OuT2"}],"04gNi":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "renderizarHeader", ()=>renderizarHeader);
@@ -596,7 +598,7 @@ function renderizarHeader(dondeRenderizo) {
     dondeRenderizo.appendChild(nuevoContainer);
 }
 
-},{"./navbar.css":"4uwKB","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"4uwKB":[function() {},{}],"gkKU3":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./navbar.css":"4uwKB"}],"gkKU3":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -626,6 +628,44 @@ exports.export = function(dest, destName, get) {
     });
 };
 
-},{}]},["iJYvl","h7u1C"], "h7u1C", "parcelRequireca0a")
+},{}],"4uwKB":[function() {},{}],"9kmaD":[function(require,module,exports) {
+//import  "./sent.css" 
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "renderizarSentComponent", ()=>renderizarSentComponent);
+const removeChilds = (parent)=>{
+    while(parent.lastChild)parent.removeChild(parent.lastChild);
+};
+function renderizarSentComponent(dondeRenderizo) {
+    removeChilds(dondeRenderizo);
+    if (!dondeRenderizo.hasChildNodes()) {
+        const nuevoContainerSent = document.createElement("div");
+        nuevoContainerSent.innerHTML = `
+            <h1 class="prueba">HOLA soy sent</h1>
+        `;
+        dondeRenderizo.appendChild(nuevoContainerSent);
+    }
+}
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"4OuT2":[function(require,module,exports) {
+//import "./inbox.css"
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "renderizarInboxComponent", ()=>renderizarInboxComponent);
+const removeChilds = (parent)=>{
+    while(parent.lastChild)parent.removeChild(parent.lastChild);
+};
+function renderizarInboxComponent(dondeRenderizo) {
+    removeChilds(dondeRenderizo);
+    if (!dondeRenderizo.hasChildNodes()) {
+        const nuevoContainerInbox = document.createElement("div");
+        nuevoContainerInbox.innerHTML = `
+            <h1 class="prueba2">HOLA soy inbox</h1>
+        `;
+        dondeRenderizo.appendChild(nuevoContainerInbox);
+    }
+}
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["iJYvl","h7u1C"], "h7u1C", "parcelRequireca0a")
 
 //# sourceMappingURL=index.b71e74eb.js.map
