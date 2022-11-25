@@ -68,6 +68,14 @@
   }
 }
 
+.prueba2 {
+  color: red;
+}
+
+.prueba {
+  color: green;
+}
+
 .navBar-container {
   width: -moz-fit-content;
   width: fit-content;

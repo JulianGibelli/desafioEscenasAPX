@@ -9,10 +9,10 @@ function handleRoute(path){
     
     const rutasPosibles = [{
         path: /\/inbox/,
-        handler:()=> {
+        handler:()=>
             //si descomento esta llamada se rompe todo
             renderizarInboxComponent(mainSectionContainer)
-        }
+        
     },
     {
         path: /\/sent/,

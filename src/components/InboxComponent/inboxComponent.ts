@@ -1,4 +1,5 @@
-//import "./inbox.css"
+import "./inbox.css"
+//import "../NavBar/navbar.css" 
 
 const removeChilds = (parent) => {
     while (parent.lastChild) {

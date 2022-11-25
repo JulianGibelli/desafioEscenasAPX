@@ -1,4 +1,5 @@
 //import  "./sent.css" 
+import "./sent.css" 
 
 const removeChilds = (parent) => {
     while (parent.lastChild) {

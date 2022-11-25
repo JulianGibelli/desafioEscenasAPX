@@ -541,10 +541,8 @@ function handleRoute(path) {
     const rutasPosibles = [
         {
             path: /\/inbox/,
-            handler: ()=>{
-                //si descomento esta llamada se rompe todo
-                (0, _inboxComponent.renderizarInboxComponent)(mainSectionContainer);
-            }
+            handler: ()=>//si descomento esta llamada se rompe todo
+                (0, _inboxComponent.renderizarInboxComponent)(mainSectionContainer)
         },
         {
             path: /\/sent/,
@@ -633,6 +631,7 @@ exports.export = function(dest, destName, get) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "renderizarSentComponent", ()=>renderizarSentComponent);
+var _sentCss = require("./sent.css");
 const removeChilds = (parent)=>{
     while(parent.lastChild)parent.removeChild(parent.lastChild);
 };
@@ -647,11 +646,12 @@ function renderizarSentComponent(dondeRenderizo) {
     }
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"4OuT2":[function(require,module,exports) {
-//import "./inbox.css"
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./sent.css":"eLi3e"}],"eLi3e":[function() {},{}],"4OuT2":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "renderizarInboxComponent", ()=>renderizarInboxComponent);
+var _inboxCss = require("./inbox.css");
+//import "../NavBar/navbar.css" 
 const removeChilds = (parent)=>{
     while(parent.lastChild)parent.removeChild(parent.lastChild);
 };
@@ -666,6 +666,6 @@ function renderizarInboxComponent(dondeRenderizo) {
     }
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["iJYvl","h7u1C"], "h7u1C", "parcelRequireca0a")
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./inbox.css":"fYOBW"}],"fYOBW":[function() {},{}]},["iJYvl","h7u1C"], "h7u1C", "parcelRequireca0a")
 
 //# sourceMappingURL=index.b71e74eb.js.map
